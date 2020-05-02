@@ -80,7 +80,7 @@ def create_plot(args):
     if (args.output):
         from matplotlib.animation import FFMpegWriter
         writer = FFMpegWriter(fps=args.fps, metadata=dict(artist='Fundacja Beskid'), bitrate=args.bitrate)
-        ani.save(args.output[1:-1], writer=writer)
+        ani.save(args.output, writer=writer)
     else:
         plt.show()
 
